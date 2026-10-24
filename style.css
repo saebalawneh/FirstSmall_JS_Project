@@ -1,0 +1,140 @@
+/* Small shared additions for the Tailwind-based layout. */
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(51 65 85);
+}
+
+.dark .form-label {
+  color: rgb(226 232 240);
+}
+
+.form-input {
+  margin-top: 0.5rem;
+  display: block;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(203 213 225);
+  background-color: rgb(248 250 252);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: rgb(15 23 42);
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.form-input::placeholder {
+  color: rgb(148 163 184);
+}
+
+.form-input:focus {
+  border-color: rgb(99 102 241);
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 0.2);
+}
+
+.dark .form-input {
+  border-color: rgb(51 65 85);
+  background-color: rgb(2 6 23);
+  color: rgb(241 245 249);
+}
+
+.photo-preview-container {
+  display: flex;
+  min-height: 5rem;
+  min-width: 5rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px dashed rgb(203 213 225);
+  background-color: rgb(248 250 252);
+}
+
+.dark .photo-preview-container {
+  border-color: rgb(51 65 85);
+  background-color: rgb(2 6 23);
+}
+
+.detail-field {
+  border-radius: 0.75rem;
+  background-color: rgb(248 250 252);
+  padding: 1rem;
+}
+
+.dark .detail-field {
+  background-color: rgb(15 23 42);
+}
+
+.detail-label {
+  margin-bottom: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgb(100 116 139);
+}
+
+
+/* From Uiverse.io by Subaashbala */
+.loader {
+  --ANIMATION-DELAY-MULTIPLIER: 70ms;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: none;
+  background-color: rgb(15 23 42 / 0.75);
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.loader.is-visible {
+  display: flex;
+}
+.loader span {
+  padding: 0;
+  margin: 0;
+  letter-spacing: -5rem;
+  animation-delay: 0s;
+  transform: translateY(4rem);
+  animation: hideAndSeek 1s alternate infinite cubic-bezier(0.86, 0, 0.07, 1);
+}
+.loader .l {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 0);
+}
+.loader .o {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 1);
+}
+.loader .a {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 2);
+}
+.loader .d {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 3);
+}
+.loader .ispan {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 4);
+}
+.loader .n {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 5);
+}
+.loader .g {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 6);
+}
+.letter {
+  width: fit-content;
+  height: 3rem;
+}
+.i {
+  margin-inline: 5px;
+}
+@keyframes hideAndSeek {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
